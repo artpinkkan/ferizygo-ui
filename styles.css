@@ -46,7 +46,8 @@ body {
 /* ── Brand Panel ───────────────────────────────────────── */
 .brand-panel {
   position: relative;
-  flex: 0 0 420px;
+  flex: 1 1 0;
+  max-width: 420px;
   background: linear-gradient(117.9deg, var(--ocean-dark) 12.5%, var(--ocean-light) 87.5%);
   display: flex;
   flex-direction: column;
@@ -140,7 +141,7 @@ body {
 
 /* ── Form Panel ────────────────────────────────────────── */
 .form-panel {
-  flex: 1;
+  flex: 3 1 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -241,7 +242,7 @@ body {
 .field-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 }
 
 .field-group label:not(.checkbox-label) {
@@ -323,8 +324,11 @@ body {
   display: block;
   font-size: 0.78rem;
   color: var(--error);
-  min-height: 1em;
   font-weight: 500;
+}
+
+.error-msg:not(:empty) {
+  margin-top: 4px;
 }
 
 /* ── Password Strength ─────────────────────────────────── */

@@ -24,9 +24,6 @@ const errors = {
   terms:           document.getElementById('termsError'),
 };
 
-const strengthFill  = document.getElementById('strengthFill');
-const strengthLabel = document.getElementById('strengthLabel');
-
 // ── Validators ────────────────────────────────────────────
 const validators = {
   fullName(val) {
@@ -70,42 +67,6 @@ const validators = {
   },
 };
 
-// ── Password strength ─────────────────────────────────────
-function getStrength(pwd) {
-  let score = 0;
-  if (pwd.length >= 8)  score++;
-  if (pwd.length >= 12) score++;
-  if (/[A-Z]/.test(pwd)) score++;
-  if (/[0-9]/.test(pwd)) score++;
-  if (/[^A-Za-z0-9]/.test(pwd)) score++;
-  return score;
-}
-
-const strengthLevels = [
-  { min: 0, max: 1, label: '',        color: 'transparent', width: '0%'   },
-  { min: 1, max: 2, label: 'Weak',    color: '#e53e3e',     width: '25%'  },
-  { min: 2, max: 3, label: 'Fair',    color: '#ed8936',     width: '50%'  },
-  { min: 3, max: 4, label: 'Good',    color: '#ecc94b',     width: '75%'  },
-  { min: 4, max: 5, label: 'Strong',  color: '#38a169',     width: '90%'  },
-  { min: 5, max: 6, label: 'Great!',  color: '#2b6cb0',     width: '100%' },
-];
-
-function updateStrength(pwd) {
-  if (!pwd) {
-    strengthFill.style.width = '0%';
-    strengthFill.style.backgroundColor = 'transparent';
-    strengthLabel.textContent = '';
-    strengthLabel.style.color = '';
-    return;
-  }
-  const score = getStrength(pwd);
-  const level = strengthLevels.find(l => score >= l.min && score < l.max) || strengthLevels[strengthLevels.length - 1];
-  strengthFill.style.width = level.width;
-  strengthFill.style.backgroundColor = level.color;
-  strengthLabel.textContent = level.label;
-  strengthLabel.style.color = level.color;
-}
-
 // ── Field validation helper ───────────────────────────────
 function validateField(name) {
   const field = fields[name];
@@ -131,7 +92,6 @@ Object.keys(fields).forEach(name => {
   // Re-validate confirm password when password changes
   if (name === 'password') {
     field.addEventListener('input', () => {
-      updateStrength(field.value);
       if (fields.confirmPassword.value) validateField('confirmPassword');
     });
   }
@@ -195,8 +155,6 @@ function resetForm() {
     }
   });
   Object.values(errors).forEach(el => el.textContent = '');
-
-  updateStrength('');
 
   submitBtn.disabled = false;
   submitBtn.querySelector('.btn-text').hidden   = false;
