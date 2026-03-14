@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FerizyGo — Your Journey Across the Waves</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="landing.css" />
+</head>
+<body class="lp-body">
+
+  <!-- ── Header Nav ──────────────────────────────────────── -->
+  <header class="lp-header">
+    <div class="lp-header-inner">
+      <a href="landing.html" class="lp-logo">
+        <svg width="23" height="25" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 32 Q12 20 24 22 Q36 24 44 16" stroke="#003366" stroke-width="3" stroke-linecap="round" fill="none"/>
+          <rect x="10" y="22" width="28" height="10" rx="2" fill="#003366" opacity="0.9"/>
+          <rect x="14" y="16" width="16" height="8" rx="2" fill="#003366" opacity="0.7"/>
+          <rect x="6" y="32" width="36" height="4" rx="2" fill="#003366" opacity="0.5"/>
+          <circle cx="14" cy="36" r="3" fill="#003366"/>
+          <circle cx="34" cy="36" r="3" fill="#003366"/>
+        </svg>
+        <span class="lp-logo-text">Ferizygo</span>
+      </a>
+
+      <nav>
+        <ul class="lp-nav">
+          <li><a href="#">Routes</a></li>
+          <li><a href="#">My Bookings</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </nav>
+
+      <div class="lp-header-actions">
+        <a href="index.html" class="lp-btn-ghost">Sign Up</a>
+        <a href="login.html" class="lp-btn-navy">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Hero ───────────────────────────────────────────── -->
+  <section class="lp-hero">
+    <div class="lp-hero-bg" style="background-image: url('https://www.figma.com/api/mcp/asset/353fcb65-e45e-4efc-a0b2-2e6b83e1e22a');"></div>
+    <div class="lp-hero-overlay"></div>
+    <div class="lp-hero-content">
+      <h1 class="lp-hero-title">
+        Your Journey Across the<br>
+        <span class="lp-accent">Waves</span> Starts Here
+      </h1>
+      <p class="lp-hero-sub">
+        Experience seamless sea travel with Indonesia's leading ferry booking<br>
+        platform. Comfort, speed, and breathtaking views.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Booking Widget ─────────────────────────────────── -->
+  <div class="lp-booking-section">
+    <div class="lp-booking-card">
+      <div class="lp-booking-fields">
+
+        <!-- Origin Port -->
+        <div>
+          <div class="lp-bfield-label">
+            <svg width="9" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.2 11.4 7.5 11.6a.8.8 0 0 0 1 0C12.8 21.4 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+            <span>Origin Port</span>
+          </div>
+          <div class="lp-bfield-wrap">
+            <select id="bk-from" class="lp-bfield-select">
+              <option value="" disabled selected>Departure City</option>
+              <option value="merak">Merak</option>
+              <option value="bakauheni">Bakauheni</option>
+              <option value="ketapang">Ketapang</option>
+              <option value="gilimanuk">Gilimanuk</option>
+              <option value="padangbai">Padangbai</option>
+              <option value="lembar">Lembar</option>
+            </select>
+            <span class="lp-bfield-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- Destination Port -->
+        <div>
+          <div class="lp-bfield-label">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+            <span>Destination Port</span>
+          </div>
+          <div class="lp-bfield-wrap">
+            <select id="bk-to" class="lp-bfield-select">
+              <option value="" disabled selected>Arrival City</option>
+              <option value="merak">Merak</option>
+              <option value="bakauheni">Bakauheni</option>
+              <option value="ketapang">Ketapang</option>
+              <option value="gilimanuk">Gilimanuk</option>
+              <option value="padangbai">Padangbai</option>
+              <option value="lembar">Lembar</option>
+            </select>
+            <span class="lp-bfield-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- Departure Date -->
+        <div>
+          <div class="lp-bfield-label">
+            <svg width="10" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span>Departure Date</span>
+          </div>
+          <input type="date" id="bk-date" class="lp-bfield-date" />
+        </div>
+
+        <!-- Passengers -->
+        <div>
+          <div class="lp-bfield-label">
+            <svg width="14" height="7" viewBox="0 0 24 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="4" r="3"/><circle cx="19" cy="4" r="3"/><circle cx="12" cy="4" r="3"/><path d="M2 12a3 3 0 0 1 6 0M13 12a3 3 0 0 1 6 0M9 12a3 3 0 0 1 6 0"/></svg>
+            <span>Passengers</span>
+          </div>
+          <div class="lp-bfield-wrap">
+            <select id="bk-passengers" class="lp-bfield-select">
+              <option value="1">1 Adult</option>
+              <option value="2">2 Adults</option>
+              <option value="3">3 Adults</option>
+              <option value="4">4 Adults</option>
+              <option value="5">5 Adults</option>
+            </select>
+            <span class="lp-bfield-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- Search Button -->
+        <div class="lp-bfield-col-btn">
+          <button type="button" class="lp-search-btn" id="bk-search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            Search Routes
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Vehicle row -->
+      <div class="lp-vehicle-row">
+        <label class="lp-vehicle-chk">
+          <input type="checkbox" id="bk-vehicle-chk" />
+          Traveling with a vehicle?
+        </label>
+        <div class="lp-vehicle-types" id="bk-vehicle-types">
+          <label class="lp-vtype">
+            <input type="radio" name="bk-vtype" value="car" />
+            <svg width="16" height="10" viewBox="0 0 24 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="2" width="15" height="9" rx="2"/><path d="M16 6h3l3 4v3h-6V6z"/><circle cx="5.5" cy="13" r="2"/><circle cx="18.5" cy="13" r="2"/></svg>
+            Car
+          </label>
+          <label class="lp-vtype">
+            <input type="radio" name="bk-vtype" value="motorcycle" />
+            <svg width="16" height="10" viewBox="0 0 24 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="11" r="3"/><circle cx="19" cy="11" r="3"/><path d="M5 11l4-8h6l2 4h3"/><path d="M9 3l2 4"/></svg>
+            Bike
+          </label>
+          <label class="lp-vtype">
+            <input type="radio" name="bk-vtype" value="bus" />
+            <svg width="16" height="10" viewBox="0 0 24 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="22" height="11" rx="2"/><path d="M1 6h22M8 1v11M16 1v11"/><circle cx="5" cy="14" r="2"/><circle cx="19" cy="14" r="2"/></svg>
+            Van
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Features ───────────────────────────────────────── -->
+  <section class="lp-features">
+    <div class="lp-features-inner">
+
+      <div class="lp-feature">
+        <div class="lp-feature-icon">
+          <svg width="30" height="29" viewBox="0 0 30 29" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="15" cy="14" r="10"/>
+            <circle cx="15" cy="14" r="4"/>
+            <line x1="15" y1="1" x2="15" y2="4"/>
+            <line x1="15" y1="24" x2="15" y2="27"/>
+            <line x1="1" y1="14" x2="4" y2="14"/>
+            <line x1="26" y1="14" x2="29" y2="14"/>
+          </svg>
+        </div>
+        <h3 class="lp-feature-title">Real-time Tracking</h3>
+        <p class="lp-feature-desc">Know exactly where your ferry is at any moment with our precision GPS integration.</p>
+      </div>
+
+      <div class="lp-feature">
+        <div class="lp-feature-icon">
+          <svg width="20" height="25" viewBox="0 0 20 25" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 1 1 13 10 13 8 24 20 12 11 12 12 1"/>
+          </svg>
+        </div>
+        <h3 class="lp-feature-title">2-Minute Booking</h3>
+        <p class="lp-feature-desc">Our streamlined checkout ensures you spend less time booking and more time exploring.</p>
+      </div>
+
+      <div class="lp-feature">
+        <div class="lp-feature-icon">
+          <svg width="28" height="20" viewBox="0 0 28 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="1" width="26" height="18" rx="3"/>
+            <circle cx="14" cy="10" r="4"/>
+            <line x1="1" y1="5" x2="27" y2="5"/>
+            <line x1="1" y1="15" x2="27" y2="15"/>
+          </svg>
+        </div>
+        <h3 class="lp-feature-title">Transparent Pricing</h3>
+        <p class="lp-feature-desc">What you see is what you pay. No hidden port fees or surprise fuel surcharges.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Popular Routes ─────────────────────────────────── -->
+  <section class="lp-routes">
+    <div class="lp-routes-inner">
+      <div class="lp-section-head">
+        <div>
+          <h2 class="lp-section-title">Popular Routes</h2>
+          <p class="lp-section-sub">Discover the most sought-after Indonesian ferry connections.</p>
+        </div>
+        <a href="search.html" class="lp-view-all">View all routes →</a>
+      </div>
+
+      <div class="lp-routes-grid">
+
+        <a href="search.html" class="lp-route-card">
+          <div class="lp-route-img">
+            <img src="https://www.figma.com/api/mcp/asset/51080582-2180-4169-85c7-677db4ac2509" alt="Merak to Bakauheni" />
+            <span class="lp-route-badge">From Rp 25k</span>
+          </div>
+          <div class="lp-route-name">Merak to Bakauheni</div>
+          <div class="lp-route-meta">2h 00m • Regular Ferry</div>
+        </a>
+
+        <a href="search.html" class="lp-route-card">
+          <div class="lp-route-img">
+            <img src="https://www.figma.com/api/mcp/asset/ed06a77a-939e-4651-8a90-9e079d101df6" alt="Ketapang to Gilimanuk" />
+            <span class="lp-route-badge">From Rp 10k</span>
+          </div>
+          <div class="lp-route-name">Ketapang to Gilimanuk</div>
+          <div class="lp-route-meta">45m • Express</div>
+        </a>
+
+        <a href="search.html" class="lp-route-card">
+          <div class="lp-route-img">
+            <img src="https://www.figma.com/api/mcp/asset/e661ff68-2b7d-4327-bbbb-7d3bcf6a5c2a" alt="Padangbai to Lembar" />
+            <span class="lp-route-badge">From Rp 45k</span>
+          </div>
+          <div class="lp-route-name">Padangbai to Lembar</div>
+          <div class="lp-route-meta">4h 30m • ASDP Ferry</div>
+        </a>
+
+        <a href="search.html" class="lp-route-card">
+          <div class="lp-route-img">
+            <img src="https://www.figma.com/api/mcp/asset/b01c4789-74c9-46bc-a7d9-acda49df1fa7" alt="Bakauheni to Merak" />
+            <span class="lp-route-badge">From Rp 25k</span>
+          </div>
+          <div class="lp-route-name">Bakauheni to Merak</div>
+          <div class="lp-route-meta">2h 00m • Regular Ferry</div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────── -->
+  <footer class="lp-footer">
+    <div class="lp-footer-inner">
+
+      <div class="lp-footer-brand">
+        <a href="landing.html" class="lp-footer-logo">
+          <svg width="18" height="20" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 32 Q12 20 24 22 Q36 24 44 16" stroke="#f8fafc" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <rect x="10" y="22" width="28" height="10" rx="2" fill="#f8fafc" opacity="0.9"/>
+            <rect x="14" y="16" width="16" height="8" rx="2" fill="#f8fafc" opacity="0.7"/>
+            <rect x="6" y="32" width="36" height="4" rx="2" fill="#f8fafc" opacity="0.5"/>
+            <circle cx="14" cy="36" r="3" fill="#f8fafc"/>
+            <circle cx="34" cy="36" r="3" fill="#f8fafc"/>
+          </svg>
+          <span class="lp-footer-logo-text">Ferizygo</span>
+        </a>
+        <p class="lp-footer-desc">Making sea travel accessible, reliable, and enjoyable for everyone. Book your next adventure with FerizyGo.</p>
+      </div>
+
+      <div>
+        <h5 class="lp-footer-col-title">Company</h5>
+        <ul class="lp-footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="lp-footer-col-title">Support</h5>
+        <ul class="lp-footer-links">
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Refund Policy</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="lp-footer-col-title">Newsletter</h5>
+        <p class="lp-newsletter-sub">Get the latest travel deals and route updates.</p>
+        <div class="lp-newsletter-form">
+          <input type="email" class="lp-newsletter-input" placeholder="Email" />
+          <button type="button" class="lp-newsletter-btn">Join</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="lp-footer-bottom">
+      <span class="lp-footer-copy">© 2024 FerizyGo Technologies. All rights reserved.</span>
+      <div class="lp-footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="landing.js"></script>
+</body>
+</html>
