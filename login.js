@@ -1,7 +1,6 @@
 'use strict';
 
 // ── DOM refs ──────────────────────────────────────────────
-const form           = document.getElementById('loginForm');
 const loginBtn       = document.getElementById('loginBtn');
 const successOverlay = document.getElementById('successOverlay');
 const dashboardBtn   = document.getElementById('dashboardBtn');
@@ -72,10 +71,8 @@ document.querySelectorAll('.toggle-password').forEach(btn => {
   });
 });
 
-// ── Form submit ───────────────────────────────────────────
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-
+// ── Login button click ────────────────────────────────────
+loginBtn.addEventListener('click', async () => {
   const valid = Object.keys(fields).map(name => validateField(name)).every(Boolean);
   if (!valid) return;
 

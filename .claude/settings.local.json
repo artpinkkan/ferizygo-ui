@@ -5,7 +5,8 @@
       "Bash(open:*)",
       "mcp__figma__generate_figma_design",
       "mcp__figma__get_metadata",
-      "mcp__figma__get_design_context"
+      "mcp__figma__get_design_context",
+      "Bash(lsof:*)"
     ]
   }
 }
