@@ -33,8 +33,8 @@
       </nav>
 
       <div class="lp-header-actions">
-        <a href="index.html" class="lp-btn-ghost">Sign Up</a>
-        <a href="login.html" class="lp-btn-navy">Login</a>
+        <button type="button" class="lp-btn-ghost" id="lp-signup-trigger">Sign Up</button>
+        <button type="button" class="lp-btn-navy" id="lp-login-trigger">Login</button>
       </div>
     </div>
   </header>
@@ -223,12 +223,12 @@
           <h2 class="lp-section-title">Popular Routes</h2>
           <p class="lp-section-sub">Discover the most sought-after Indonesian ferry connections.</p>
         </div>
-        <a href="search.html" class="lp-view-all">View all routes →</a>
+        <a href="detail.html" class="lp-view-all">View all routes →</a>
       </div>
 
       <div class="lp-routes-grid">
 
-        <a href="search.html" class="lp-route-card">
+        <a href="detail.html" class="lp-route-card">
           <div class="lp-route-img">
             <img src="https://www.figma.com/api/mcp/asset/51080582-2180-4169-85c7-677db4ac2509" alt="Merak to Bakauheni" />
             <span class="lp-route-badge">From Rp 25k</span>
@@ -237,7 +237,7 @@
           <div class="lp-route-meta">2h 00m • Regular Ferry</div>
         </a>
 
-        <a href="search.html" class="lp-route-card">
+        <a href="detail.html" class="lp-route-card">
           <div class="lp-route-img">
             <img src="https://www.figma.com/api/mcp/asset/ed06a77a-939e-4651-8a90-9e079d101df6" alt="Ketapang to Gilimanuk" />
             <span class="lp-route-badge">From Rp 10k</span>
@@ -246,7 +246,7 @@
           <div class="lp-route-meta">45m • Express</div>
         </a>
 
-        <a href="search.html" class="lp-route-card">
+        <a href="detail.html" class="lp-route-card">
           <div class="lp-route-img">
             <img src="https://www.figma.com/api/mcp/asset/e661ff68-2b7d-4327-bbbb-7d3bcf6a5c2a" alt="Padangbai to Lembar" />
             <span class="lp-route-badge">From Rp 45k</span>
@@ -255,7 +255,7 @@
           <div class="lp-route-meta">4h 30m • ASDP Ferry</div>
         </a>
 
-        <a href="search.html" class="lp-route-card">
+        <a href="detail.html" class="lp-route-card">
           <div class="lp-route-img">
             <img src="https://www.figma.com/api/mcp/asset/b01c4789-74c9-46bc-a7d9-acda49df1fa7" alt="Bakauheni to Merak" />
             <span class="lp-route-badge">From Rp 25k</span>
@@ -324,6 +324,50 @@
       </div>
     </div>
   </footer>
+  <!-- ── Auth Modals ───────────────────────────────────────── -->
+  <div class="lp-auth-overlay" id="lp-login-modal" aria-hidden="true">
+    <div class="lp-auth-dialog" role="dialog" aria-modal="true" aria-labelledby="lp-login-title">
+      <button type="button" class="lp-auth-close" data-auth-close>&times;</button>
+      <h2 class="lp-auth-title" id="lp-login-title">Sign in to FerizyGo</h2>
+      <p class="lp-auth-sub">Access your bookings and manage your trips.</p>
+      <form class="lp-auth-form" id="lp-login-form">
+        <label class="lp-auth-field">
+          <span class="lp-auth-label">Email</span>
+          <input type="email" required autocomplete="email" placeholder="you@example.com" />
+        </label>
+        <label class="lp-auth-field">
+          <span class="lp-auth-label">Password</span>
+          <input type="password" required autocomplete="current-password" placeholder="Enter your password" />
+        </label>
+        <button type="submit" class="lp-search-btn lp-auth-btn">Login</button>
+      </form>
+      <p class="lp-auth-footnote">Don't have an account? <button type="button" class="lp-auth-link" id="lp-switch-to-signup">Sign up</button></p>
+    </div>
+  </div>
+
+  <div class="lp-auth-overlay" id="lp-signup-modal" aria-hidden="true">
+    <div class="lp-auth-dialog" role="dialog" aria-modal="true" aria-labelledby="lp-signup-title">
+      <button type="button" class="lp-auth-close" data-auth-close>&times;</button>
+      <h2 class="lp-auth-title" id="lp-signup-title">Create your account</h2>
+      <p class="lp-auth-sub">Book ferries faster and keep all your tickets in one place.</p>
+      <form class="lp-auth-form" id="lp-signup-form">
+        <label class="lp-auth-field">
+          <span class="lp-auth-label">Full name</span>
+          <input type="text" required autocomplete="name" placeholder="e.g. Budi Santoso" />
+        </label>
+        <label class="lp-auth-field">
+          <span class="lp-auth-label">Email</span>
+          <input type="email" required autocomplete="email" placeholder="you@example.com" />
+        </label>
+        <label class="lp-auth-field">
+          <span class="lp-auth-label">Password</span>
+          <input type="password" required autocomplete="new-password" placeholder="Min. 8 characters" />
+        </label>
+        <button type="submit" class="lp-search-btn lp-auth-btn">Sign Up</button>
+      </form>
+      <p class="lp-auth-footnote">Already have an account? <button type="button" class="lp-auth-link" id="lp-switch-to-login">Sign in</button></p>
+    </div>
+  </div>
 
   <script src="landing.js"></script>
 </body>

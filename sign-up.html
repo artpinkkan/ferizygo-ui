@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account — FerizyGo</title>
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body class="auth-body">
+
+  <!-- ── Success overlay ──────────────────────────────────── -->
+  <div class="auth-success" id="successOverlay" hidden>
+    <div class="auth-success-content">
+      <div class="auth-success-icon">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <path d="M9 18l6 6 12-12" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h2 class="auth-success-title">Account Created!</h2>
+      <p class="auth-success-sub">Welcome to FerizyGo. Your account is ready. Let's find you the best ferry routes.</p>
+      <a href="landing.html" class="auth-success-btn">Explore Routes</a>
+    </div>
+  </div>
+
+  <!-- ── Page layout ──────────────────────────────────────── -->
+  <div class="auth-page">
+
+    <!-- Left: navy hero (50%) -->
+    <div class="auth-hero-navy">
+      <div class="auth-hero-navy-photo">
+        <img src="https://www.figma.com/api/mcp/asset/c7ed67f4-fbac-41e3-8a04-fc2b8c79e11d" alt="" />
+      </div>
+      <div class="auth-hero-navy-gradient"></div>
+
+      <div class="auth-hero-navy-content">
+        <a href="landing.html" class="auth-logo">
+          <span class="auth-logo-text">FerizyGo</span>
+        </a>
+
+        <h1 class="auth-hero-title-lg">Your gateway to the islands.</h1>
+        <p class="auth-hero-sub-lg">Join thousands of travellers who book smarter with FerizyGo — Indonesia's trusted ferry ticketing platform.</p>
+
+        <!-- Avatar stack -->
+        <div class="auth-avatars">
+          <div class="auth-avatar-stack">
+            <div class="auth-avatar">
+              <img src="https://www.figma.com/api/mcp/asset/76a319e9-5846-4ce2-aa0c-e3ae4707f672" alt="User" />
+            </div>
+            <div class="auth-avatar">
+              <img src="https://www.figma.com/api/mcp/asset/776fcf69-bc61-4ec7-b1ba-1e4d1245e06e" alt="User" />
+            </div>
+            <div class="auth-avatar">
+              <img src="https://www.figma.com/api/mcp/asset/e6fc23d9-90b1-4303-b310-e20dc235ddc7" alt="User" />
+            </div>
+          </div>
+          <span class="auth-avatar-label">Join 10k+ active commuters</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: light form panel (50%) -->
+    <div class="auth-form-panel-light">
+      <div class="auth-form-box">
+
+        <h2 class="auth-form-title-black">Create your account</h2>
+        <p class="auth-form-sub-slate">Start booking ferry tickets in minutes.</p>
+
+        <!-- Form -->
+        <form id="signUpForm" class="auth-form-compact" novalidate>
+
+          <!-- Full Name -->
+          <div class="auth-field">
+            <label class="auth-label" for="fullName">Full Name</label>
+            <div class="auth-input-wrap">
+              <span class="auth-input-left-icon">
+                <img src="https://www.figma.com/api/mcp/asset/46410ab2-559b-4b3d-84c6-b9a29ca02f28" alt="" />
+              </span>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                class="auth-input auth-input-icon"
+                placeholder="John Doe"
+                autocomplete="name"
+              />
+            </div>
+            <span class="auth-error" id="fullNameError"></span>
+          </div>
+
+          <!-- Email -->
+          <div class="auth-field">
+            <label class="auth-label" for="email">Email address</label>
+            <div class="auth-input-wrap">
+              <span class="auth-input-left-icon">
+                <img src="https://www.figma.com/api/mcp/asset/8cad6602-25b2-456c-9071-3d58306cbbe2" alt="" />
+              </span>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="auth-input auth-input-icon"
+                placeholder="you@example.com"
+                autocomplete="email"
+              />
+            </div>
+            <span class="auth-error" id="emailError"></span>
+          </div>
+
+          <!-- Phone -->
+          <div class="auth-field">
+            <label class="auth-label" for="phone">Phone number</label>
+            <div class="auth-input-wrap">
+              <span class="auth-input-left-icon">
+                <img src="https://www.figma.com/api/mcp/asset/64338e05-cf10-478e-99f3-7ea610513c95" alt="" />
+              </span>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="auth-input auth-input-icon"
+                placeholder="+62 812 3456 7890"
+                autocomplete="tel"
+              />
+            </div>
+            <span class="auth-error" id="phoneError"></span>
+          </div>
+
+          <!-- Password -->
+          <div class="auth-field">
+            <label class="auth-label" for="password">Password</label>
+            <div class="auth-input-wrap">
+              <span class="auth-input-left-icon">
+                <img src="https://www.figma.com/api/mcp/asset/40a55974-7746-425e-a329-c251f806de5d" alt="" />
+              </span>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="auth-input auth-input-icon"
+                placeholder="Min. 8 characters"
+                autocomplete="new-password"
+                style="padding-right: 46px;"
+              />
+              <button type="button" class="auth-eye-btn" id="eyeBtn" aria-label="Toggle password visibility">
+                <img id="eyeIcon" src="https://www.figma.com/api/mcp/asset/17efbd52-49b8-47d7-88f9-b1b24c257c05" alt="" width="20" height="20" />
+              </button>
+            </div>
+            <span class="auth-error" id="passwordError"></span>
+          </div>
+
+          <!-- Terms checkbox -->
+          <label class="auth-checkbox-label">
+            <input type="checkbox" id="terms" />
+            <span>I agree to the <a href="#" class="auth-terms-link">Terms of Service</a> and <a href="#" class="auth-terms-link">Privacy Policy</a></span>
+          </label>
+          <span class="auth-error" id="termsError"></span>
+
+        </form>
+
+        <!-- Submit button -->
+        <button type="button" class="auth-submit-btn-sm" id="signUpBtn" style="margin-top: 24px;">
+          <span class="auth-btn-text">Create Account</span>
+          <span class="auth-btn-loader" hidden>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="8" stroke="rgba(255,255,255,0.4)" stroke-width="2.5"/>
+              <path d="M10 2a8 8 0 018 8" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </button>
+
+        <!-- Divider -->
+        <div class="auth-divider" style="margin-top: 24px;">
+          <span class="auth-divider-line"></span>
+          <span class="auth-divider-text-bg">Or sign up with</span>
+          <span class="auth-divider-line"></span>
+        </div>
+
+        <!-- Social buttons 2-col -->
+        <div class="auth-socials-2col" style="margin-top: 0;">
+          <button type="button" class="auth-social-btn-sm">
+            <span class="auth-social-icon">
+              <img src="https://www.figma.com/api/mcp/asset/82bfc06c-022c-45aa-bf5a-db7a66eb0bf8" alt="Google" />
+            </span>
+            Google
+          </button>
+          <button type="button" class="auth-social-btn-sm">
+            <span class="auth-social-icon">
+              <img src="https://www.figma.com/api/mcp/asset/f403532a-1785-4877-891a-af3daf9c4d25" alt="Facebook" />
+            </span>
+            Facebook
+          </button>
+        </div>
+
+        <!-- Footer link -->
+        <p class="auth-footer-link-slate" style="margin-top: 24px;">
+          Already have an account? <a href="sign-in.html">Log In</a>
+        </p>
+
+        <!-- Help footer -->
+        <div class="auth-help">
+          <img src="https://www.figma.com/api/mcp/asset/12dc5656-c765-46f8-86eb-4a2b553c4596" alt="" width="14" height="14" style="opacity:0.5;" />
+          Need help? Contact support
+        </div>
+
+      </div>
+    </div><!-- /auth-form-panel-light -->
+
+  </div><!-- /auth-page -->
+
+  <script src="sign-up.js"></script>
+</body>
+</html>

@@ -27,5 +27,77 @@ document.getElementById('bk-search').addEventListener('click', () => {
     : 'none';
 
   const params = new URLSearchParams({ from, to, date, passengers, vehicle: vtype });
-  window.location.href = `search.html?${params.toString()}`;
+  window.location.href = `detail.html?${params.toString()}`;
 });
+
+// ── Auth modals (login / signup) ───────────────────────────
+(function () {
+  const loginTrigger  = document.getElementById('lp-login-trigger');
+  const signupTrigger = document.getElementById('lp-signup-trigger');
+  const loginModal    = document.getElementById('lp-login-modal');
+  const signupModal   = document.getElementById('lp-signup-modal');
+
+  if (!loginTrigger || !signupTrigger || !loginModal || !signupModal) return;
+
+  const closeButtons = document.querySelectorAll('[data-auth-close]');
+  const switchToSignup = document.getElementById('lp-switch-to-signup');
+  const switchToLogin  = document.getElementById('lp-switch-to-login');
+
+  function openModal(modal) {
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeModal(modal) {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+  }
+
+  loginTrigger.addEventListener('click', () => {
+    closeModal(signupModal);
+    openModal(loginModal);
+  });
+
+  signupTrigger.addEventListener('click', () => {
+    closeModal(loginModal);
+    openModal(signupModal);
+  });
+
+  closeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      closeModal(loginModal);
+      closeModal(signupModal);
+    });
+  });
+
+  if (switchToSignup) {
+    switchToSignup.addEventListener('click', () => {
+      closeModal(loginModal);
+      openModal(signupModal);
+    });
+  }
+
+  if (switchToLogin) {
+    switchToLogin.addEventListener('click', () => {
+      closeModal(signupModal);
+      openModal(loginModal);
+    });
+  }
+
+  // Close on overlay click
+  [loginModal, signupModal].forEach(modal => {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal(modal);
+      }
+    });
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeModal(loginModal);
+      closeModal(signupModal);
+    }
+  });
+})();

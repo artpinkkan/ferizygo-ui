@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In — FerizyGo</title>
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body class="auth-body">
+
+  <!-- ── Page layout ──────────────────────────────────────── -->
+  <div class="auth-page">
+
+    <!-- Left: photo hero (60%) -->
+    <div class="auth-hero">
+      <div class="auth-hero-bg" style="background-image: url('https://www.figma.com/api/mcp/asset/5c2af14d-a702-494f-bacc-7889363b3b83');"></div>
+      <div class="auth-hero-overlay"></div>
+      <div class="auth-hero-gradient"></div>
+
+      <div class="auth-hero-content">
+        <a href="landing.html" class="auth-logo">
+          <span class="auth-logo-text">FerizyGo</span>
+        </a>
+        <h1 class="auth-hero-title">Your journey across the waters begins here.</h1>
+        <p class="auth-hero-sub">Book ferry tickets across Indonesia's most beautiful island routes — fast, simple, and reliable.</p>
+      </div>
+    </div>
+
+    <!-- Right: form panel (40%) -->
+    <div class="auth-form-panel">
+      <div class="auth-form-box">
+
+        <h2 class="auth-form-title">Welcome Back</h2>
+        <p class="auth-form-sub">Sign in to your FerizyGo account</p>
+
+        <!-- Social buttons -->
+        <div class="auth-socials">
+          <button type="button" class="auth-social-btn">
+            <span class="auth-social-icon">
+              <img src="https://www.figma.com/api/mcp/asset/4a549cbd-d827-468c-a3de-2fa7a655d3f5" alt="Google" />
+            </span>
+            Continue with Google
+          </button>
+          <button type="button" class="auth-social-btn">
+            <span class="auth-social-icon">
+              <img src="https://www.figma.com/api/mcp/asset/dea3db05-d39f-4e8c-b06a-d2aa3392d17f" alt="Apple" />
+            </span>
+            Continue with Apple
+          </button>
+        </div>
+
+        <!-- Divider -->
+        <div class="auth-divider">
+          <span class="auth-divider-line"></span>
+          <span class="auth-divider-text">or sign in with email</span>
+          <span class="auth-divider-line"></span>
+        </div>
+
+        <!-- Form -->
+        <form id="signInForm" class="auth-form" novalidate>
+
+          <!-- Email -->
+          <div class="auth-field">
+            <label class="auth-label" for="email">Email address</label>
+            <div class="auth-input-wrap">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="auth-input"
+                placeholder="you@example.com"
+                autocomplete="email"
+              />
+            </div>
+            <span class="auth-error" id="emailError"></span>
+          </div>
+
+          <!-- Password -->
+          <div class="auth-field">
+            <div class="auth-field-header">
+              <label class="auth-label" for="password">Password</label>
+              <a href="#" class="auth-forgot">Forgot password?</a>
+            </div>
+            <div class="auth-input-wrap">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="auth-input"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                style="padding-right: 46px;"
+              />
+              <button type="button" class="auth-eye-btn" id="eyeBtn" aria-label="Toggle password visibility">
+                <img id="eyeIcon" src="https://www.figma.com/api/mcp/asset/03d3b7d3-33c2-4a7d-8537-60ac8eb48720" alt="" width="20" height="20" />
+              </button>
+            </div>
+            <span class="auth-error" id="passwordError"></span>
+          </div>
+
+          <!-- Remember me -->
+          <label class="auth-checkbox-label">
+            <input type="checkbox" id="rememberMe" />
+            <span>Remember me for 30 days</span>
+          </label>
+
+        </form>
+
+        <!-- Submit (outside form, full-width) -->
+        <button type="button" class="auth-submit-btn" id="signInBtn" style="margin-top: 24px;">
+          <span class="auth-btn-text">Sign In</span>
+          <span class="auth-btn-loader" hidden>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="8" stroke="rgba(255,255,255,0.4)" stroke-width="2.5"/>
+              <path d="M10 2a8 8 0 018 8" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </button>
+
+        <!-- Footer -->
+        <p class="auth-footer-link" style="margin-top: 24px;">
+          Don't have an account? <a href="sign-up.html">Create an account</a>
+        </p>
+
+      </div>
+    </div><!-- /auth-form-panel -->
+
+  </div><!-- /auth-page -->
+
+  <script src="sign-in.js"></script>
+</body>
+</html>
