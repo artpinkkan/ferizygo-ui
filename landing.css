@@ -487,7 +487,7 @@
   padding-bottom: 48px;
 }
 
-.lp-footer-brand { }
+
 
 .lp-footer-logo {
   display: flex;
@@ -870,6 +870,63 @@
 
 .lp-auth-close:hover {
   color: var(--lp-text);
+}
+
+.lp-auth-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  height: 44px;
+  background: white;
+  border: 1px solid var(--lp-border);
+  border-radius: var(--lp-r-sm);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--lp-text);
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  margin-bottom: 20px;
+}
+
+.lp-auth-social-btn:hover {
+  background: var(--lp-card-bg);
+  border-color: var(--lp-light);
+}
+
+.lp-auth-social-icon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lp-auth-social-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.lp-auth-divider {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.lp-auth-divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--lp-border);
+}
+
+.lp-auth-divider-text {
+  font-size: 0.8rem;
+  color: var(--lp-muted);
+  padding: 0 12px;
+  white-space: nowrap;
 }
 
 /* ── Responsive ──────────────────────────────────────────── */
