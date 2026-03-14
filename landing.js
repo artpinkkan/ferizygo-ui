@@ -27,7 +27,7 @@ document.getElementById('bk-search').addEventListener('click', () => {
     : 'none';
 
   const params = new URLSearchParams({ from, to, date, passengers, vehicle: vtype });
-  window.location.href = `detail.html?${params.toString()}`;
+  window.location.href = `search-routes-detail.html?${params.toString()}`;
 });
 
 // ── Auth modals (login / signup) ───────────────────────────

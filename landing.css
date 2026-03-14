@@ -607,6 +607,161 @@
 
 .lp-footer-legal a:hover { color: white; }
 
+/* ── Search Routes Detail page ───────────────────────────── */
+.lp-detail-main {
+  padding: 40px 24px 80px;
+  background: var(--lp-bg);
+}
+
+.lp-detail-hero {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.lp-detail-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.lp-detail-headline {
+  max-width: 720px;
+}
+
+.lp-detail-layout {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.lp-detail-summary {
+  background: white;
+  border-radius: var(--lp-r-lg);
+  border: 1px solid var(--lp-border);
+  padding: 20px 20px 16px;
+}
+
+.lp-detail-summary-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--lp-text);
+  margin-bottom: 10px;
+}
+
+.lp-detail-summary-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.lp-detail-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.lp-detail-label {
+  color: var(--lp-muted);
+}
+
+.lp-detail-value {
+  font-weight: 600;
+  color: var(--lp-text);
+}
+
+.lp-detail-edit {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.lp-detail-schedules {
+  background: white;
+  border-radius: var(--lp-r-lg);
+  border: 1px solid var(--lp-border);
+  padding: 20px 20px 16px;
+}
+
+.lp-detail-schedules-head {
+  margin-bottom: 16px;
+}
+
+.lp-detail-schedules-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--lp-text);
+}
+
+.lp-detail-schedules-sub {
+  font-size: 0.85rem;
+  color: var(--lp-muted);
+}
+
+.lp-detail-schedule-card {
+  border-radius: var(--lp-r-md);
+  border: 1px solid var(--lp-border-lt);
+  padding: 14px 14px 12px;
+  margin-bottom: 10px;
+}
+
+.lp-detail-schedule-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.lp-detail-time-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.lp-detail-time {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--lp-text);
+}
+
+.lp-detail-arrow {
+  font-size: 0.9rem;
+  color: var(--lp-muted);
+}
+
+.lp-detail-route-line {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--lp-text);
+}
+
+.lp-detail-meta {
+  font-size: 0.8rem;
+  color: var(--lp-muted);
+}
+
+.lp-detail-price-block {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.lp-detail-price {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--lp-text);
+}
+
+.lp-detail-choose {
+  height: 32px;
+  padding-inline: 16px;
+  font-size: 0.85rem;
+  box-shadow: none;
+}
+
 /* ── Auth Modals ──────────────────────────────────────────── */
 .lp-auth-overlay {
   position: fixed;
