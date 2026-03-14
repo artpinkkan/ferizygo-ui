@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Available Ferries — FerizyGo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="schedule.css" />
+</head>
+<body class="sc-body">
+
+  <!-- ── Header ───────────────────────────────────────────── -->
+  <header class="sc-header">
+    <a href="landing.html" class="sc-logo">
+      <span class="sc-logo-text">FerizyGo</span>
+    </a>
+    <nav class="sc-nav-links">
+      <a href="sign-in.html" class="sc-nav-link">Sign In</a>
+      <a href="sign-up.html" class="sc-nav-link sc-nav-link-primary">Sign Up</a>
+    </nav>
+  </header>
+
+  <!-- ── Search summary bar ────────────────────────────────── -->
+  <div class="sc-summary-bar">
+    <div class="sc-summary-inner">
+      <div class="sc-summary-route">
+        <span class="sc-summary-port" id="barFrom">—</span>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M12 5l5 5-5 5" stroke="#003366" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="sc-summary-port" id="barTo">—</span>
+      </div>
+      <div class="sc-summary-meta">
+        <span id="barDate">—</span>
+        <span class="sc-summary-dot">·</span>
+        <span id="barPassengers">—</span>
+        <span class="sc-summary-dot">·</span>
+        <span id="barVehicle">—</span>
+      </div>
+    </div>
+    <a href="search.html" class="sc-modify-btn">Modify Search</a>
+  </div>
+
+  <!-- ── Main ─────────────────────────────────────────────── -->
+  <main class="sc-main">
+    <h1 class="sc-page-title">Available Departures</h1>
+    <p class="sc-page-sub" id="pageSubtitle">Select a ferry schedule to continue</p>
+
+    <div class="sc-results" id="scheduleList">
+      <!-- Injected by JS -->
+    </div>
+  </main>
+
+  <!-- ── Footer ───────────────────────────────────────────── -->
+  <footer class="sc-footer">
+    © 2025 FerizyGo. Safe &amp; reliable ferry booking.
+  </footer>
+
+  <script src="schedule.js"></script>
+</body>
+</html>

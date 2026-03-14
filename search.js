@@ -127,7 +127,7 @@ form.addEventListener('submit', async (e) => {
     vehicle:    fields.vehicleType.value,
   });
 
-  window.location.href = `schedule.html?${params.toString()}`;
+  window.location.href = `search-routes-detail.html?${params.toString()}`;
 });
 
 // ── Util ──────────────────────────────────────────────────
